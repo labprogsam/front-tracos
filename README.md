@@ -5,7 +5,8 @@ Project containing the Traços frontend.
 Traços is a project that aims to give more visibility to tattoo artists. This is a project created with React and Styled Component.
 
 ## Links
-+ [Mockup]
++ [Mockup]()
++ [UserStories]()
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
