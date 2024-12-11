@@ -78,7 +78,7 @@ Must be simple and show briefly what you just did.
 
 Ex: `git commit -m "Feat(32): Added the parallax effect to the background"`
 
-> Read our code of conduct and find out [how to contribute](https://github.com/labprogsam/front-tracos/dev/CONTRIBUTING.md)
+> Read our code of conduct and find out [how to contribute](https://github.com/labprogsam/front-tracos/blob/main/CONTRIBUTING.md)
 
 ## Development Team
 * **Samuel Miranda** - *Fullstack Developer* -  [labprogsam](https://github.com/labprogsam)
