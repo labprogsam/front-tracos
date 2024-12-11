@@ -6,7 +6,7 @@ Traços is a project that aims to give more visibility to tattoo artists. This i
 
 ## Links
 + [Mockup]()
-+ [UserStories]()
++ [Documentation](https://drive.google.com/drive/folders/1RIkaG9tr3MUFPjsY2Bi3DlVSgBk0n8Lz?usp=sharing)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -81,7 +81,8 @@ Ex: `git commit -m "Feat(32): Added the parallax effect to the background"`
 > Read our code of conduct and find out [how to contribute](https://github.com/labprogsam/front-tracos/dev/CONTRIBUTING.md)
 
 ## Development Team
-* **Samuel Miranda** - *Fullstack Developer* -  [labprogsam](https://github.com/labprogsam)
-* **Juliana Serafim** - *Frontend Developer* - [Juliana-serafim](https://github.com/Juliana-serafim)
-* **Yasmin Adrieny** - *Developer / QA * - [AdrySales](https://github.com/AdrySales)
+* **Samuel Miranda** - *Developer / Scrum Master* -  [labprogsam](https://github.com/labprogsam)
+* **Juliana Serafim** - *Developer / Designer* - [Juliana-serafim](https://github.com/Juliana-serafim)
+* **Yasmin Adrieny** - *Developer / Tester / QA * - [AdrySales](https://github.com/AdrySales)
 * **José Luiz** - *Developer / PO* - [jldsn](https://github.com/jldsn)
+
