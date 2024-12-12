@@ -83,6 +83,6 @@ Ex: `git commit -m "Feat(32): Added the parallax effect to the background"`
 ## Development Team
 * **Samuel Miranda** - *Developer / Scrum Master* -  [labprogsam](https://github.com/labprogsam)
 * **Juliana Serafim** - *Developer / Designer* - [Juliana-serafim](https://github.com/Juliana-serafim)
-* **Yasmin Adrieny** - *Developer / Tester / QA * - [AdrySales](https://github.com/AdrySales)
+* **Yasmin Adrieny** - *Developer / Tester / QA* - [AdrySales](https://github.com/AdrySales)
 * **José Luiz** - *Developer / PO* - [jldsn](https://github.com/jldsn)
 
