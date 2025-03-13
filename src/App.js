@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { Base } from './components';
+// import { Login, Register } from './views';
+
+// const AppRoutes = () => {
+  
+//   return (
+//     <Router>
+//       <Base>
+//         <Routes>
+//           <Route path="/login" element={<Register />}/>
+//           <Route path="/register" element={<Register />}/>
+//           <Route path="/" element={<div>aaaaaaaaaaa</div>}/>
+//         </Routes>
+//       </Base>
+//     </Router>
+//   );
+// };
+
+// export default AppRoutes;
+
+import React from "react";
+import "./App.css";
+import InternalRoutes from "./routes/InternalRoutes";
+import { BrowserRouter } from "react-router-dom";
+import AuthProvider from "./contexts/auth";
+import AlertProvider from "./contexts/alert";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AlertProvider>
+        <AuthProvider>
+          <InternalRoutes />
+        </AuthProvider>
+      </AlertProvider>
+    </BrowserRouter>
   );
 }
 
