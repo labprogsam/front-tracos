@@ -38,7 +38,7 @@ const Register = () => {
         <FormContainer onSubmit={handleSubmit(onSubmit)}>
           <h1>Boas-vindas</h1>
           {(errors?.email?.type === "required" ||
-            errors?.senha?.type == "required") && (
+            errors?.senha?.type === "required") && (
             <ErrorSpan>
               Por favor, preencha todos os campos obrigatórios
             </ErrorSpan>

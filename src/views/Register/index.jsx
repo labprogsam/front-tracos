@@ -124,9 +124,9 @@ const Register = () => {
           />
           <div id="actions">
             {(errors?.email?.type === "required" ||
-              errors?.password?.type == "required" ||
-              errors?.name?.type == "required" ||
-              errors?.confirm?.type == "required"
+              errors?.password?.type === "required" ||
+              errors?.name?.type === "required" ||
+              errors?.confirm?.type === "required"
             ) && (
               <ErrorSpan>
                 Atente-se aos campos do formulário dados obrigatórios não preenchidos
