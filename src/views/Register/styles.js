@@ -43,7 +43,7 @@ const FormSide = styled.div`
 
 const FormContainer = styled.form`
   border: 1px solid #00000080;
-  padding: 50px;
+  padding: 30px 50px;
   width: 80%;
   box-sizing: border-box;
   color: #000;
@@ -59,16 +59,18 @@ const FormContainer = styled.form`
 
   #subtitle-normal {
     margin-bottom: 0px;
+    margin-top: 10px;
   }
 
   #subtitle-main {
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   h1 {
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 36px;
     letter-spacing: -1.5%;
     margin: 0;
@@ -76,7 +78,7 @@ const FormContainer = styled.form`
 
   h2 {
     color: #333333;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
   }
 
@@ -147,4 +149,17 @@ const SugestionP = styled.p`
   margin-top: 0px;
 `;
 
-export { MainContainer, ImageSide, FormSide, FormContainer, SugestionP };
+const ErrorSpan = styled.span`
+  color: red;
+  font-size: 11px;
+  margin-bottom: 10px;
+`;
+
+export {
+  MainContainer,
+  ImageSide,
+  FormSide,
+  FormContainer,
+  SugestionP,
+  ErrorSpan,
+};

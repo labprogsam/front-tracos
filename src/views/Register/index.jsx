@@ -1,6 +1,7 @@
 import React from "react";
 import LogoIcon from "../../assets/Login/logo.svg";
-import { Link, useLocation } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { grey } from "@mui/material/colors";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -12,18 +13,18 @@ import {
   FormSide,
   FormContainer,
   SugestionP,
+  ErrorSpan,
 } from "./styles";
 
 const Register = () => {
-  let location = useLocation();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
-  const onLogin = () => {
-    alert(location.pathname);
-  };
-
-  const onRegister = () => {
-    alert(location.pathname);
-  };
+  const onSubmit = () => {};
 
   return (
     <MainContainer>
@@ -33,31 +34,47 @@ const Register = () => {
         </div>
       </ImageSide>
       <FormSide>
-        <FormContainer>
+        <FormContainer onSubmit={handleSubmit(onSubmit)}>
           <h1>Realize o seu cadastro</h1>
           <h2 id="subtitle-main">Não perca oportunidades e inspirações</h2>
           <h2 id="subtitle-normal">Dados de perfil</h2>
           <TextField
+            {...register("name", {
+              required: "Por favor, preencha o campo com o nome",
+            })}
             fullWidth
-            label="Nome de usuário"
+            size="small"
+            label="Nome de usuário*"
             variant="outlined"
             margin="normal"
           />
           <TextField
+            {...register("email", {
+              required: "Por favor, preencha o campo com o email",
+            })}
             fullWidth
-            label="Email"
+            size="small"
+            label="Email*"
             variant="outlined"
             margin="normal"
           />
           <TextField
+            {...register("password", {
+              required: "Por favor, preencha o campo com a senha",
+            })}
             fullWidth
-            label="Senha"
+            size="small"
+            label="Senha*"
             variant="outlined"
             margin="normal"
           />
           <TextField
+            {...register("confirm", {
+              required: "Por favor, preencha o campo com a confirmação",
+            })}
             fullWidth
-            label="Confirmar senha"
+            size="small"
+            label="Confirmar senha*"
             variant="outlined"
             margin="normal"
           />
@@ -73,6 +90,8 @@ const Register = () => {
           <FormControlLabel
             control={
               <Checkbox
+                defaultChecked
+                required
                 sx={{
                   color: grey[800],
                   "&.Mui-checked": {
@@ -84,14 +103,15 @@ const Register = () => {
             label="Sou Tatuador ou Tatuadora"
           />
           <SugestionP>
-            Atente-se
-            que os recursos só serão liberados após a comprovação da
+            Atente-se que os recursos só serão liberados após a comprovação da
             certificação profissional
           </SugestionP>
-          <h2>Proteção de dados</h2>
+          <h2 id="subtitle-normal">Proteção de dados</h2>
           <FormControlLabel
             control={
               <Checkbox
+                defaultChecked
+                required
                 sx={{
                   color: grey[800],
                   "&.Mui-checked": {
@@ -103,7 +123,16 @@ const Register = () => {
             label="Estou ciente da política de privacidade e de proteção aos dados"
           />
           <div id="actions">
-            <Button id="entrar" fullWidth onClick={onLogin} variant="contained">
+            {(errors?.email?.type === "required" ||
+              errors?.password?.type == "required" ||
+              errors?.name?.type == "required" ||
+              errors?.confirm?.type == "required"
+            ) && (
+              <ErrorSpan>
+                Atente-se aos campos do formulário dados obrigatórios não preenchidos
+              </ErrorSpan>
+            )}
+            <Button type="submit" id="entrar" fullWidth variant="contained">
               Cadastrar
             </Button>
             <Link id="register-button" to="/auth/login">

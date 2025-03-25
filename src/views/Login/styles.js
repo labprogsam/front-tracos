@@ -43,7 +43,7 @@ const FormSide = styled.div`
 
 const FormContainer = styled.form`
   border: 1px solid #00000080;
-  padding: 50px;
+  padding: 30px 50px;
   width: 80%;
   box-sizing: border-box;
   color: #000;
@@ -54,19 +54,20 @@ const FormContainer = styled.form`
   flex-direction: column;
   border-radius: 7px;
 
+  #subtitle-main {
+    margin-top: 10px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
   h1 {
     font-family: Montserrat;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     letter-spacing: -1.5%;
-    margin-bottom: 0;
-  }
-
-  h2 {
-    color: #333333;
-    font-size: 14px;
-    font-weight: 600;
+    margin-bottom: 30px;
   }
 
   #name {
@@ -126,9 +127,15 @@ const FormContainer = styled.form`
 
     #register-button {
       width: 100%;
-	  margin-top: 0;
+      margin-top: 0;
     }
   }
 `;
 
-export { MainContainer, ImageSide, FormSide, FormContainer };
+const ErrorSpan = styled.span`
+  margin: 0px;
+  color: red;
+  font-size: 11px;
+`;
+
+export { MainContainer, ImageSide, FormSide, FormContainer, ErrorSpan };
