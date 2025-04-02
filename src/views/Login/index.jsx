@@ -70,7 +70,7 @@ const Register = () => {
                 Crie uma conta
               </Button>
             </Link>
-            <Link to="/auth/forget">Esqueci minha senha</Link>
+            <Link to="/auth/forgot-password">Esqueci minha senha</Link>
           </div>
         </FormContainer>
       </FormSide>

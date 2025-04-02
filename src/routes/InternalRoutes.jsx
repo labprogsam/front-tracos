@@ -11,10 +11,10 @@ const InternalRoutes = () => {
 
   return (
     <Switch>
-      <Route path="/auth" component={AuthRoutes} />
       <PrivateRoute path="/app" component={AppRoutes} />
+      <Route path="/auth" component={AuthRoutes} />
       {/* <Redirect to={cookies?.access_token ? '/app' : '/auth'} /> */}
-      <Redirect to={false ? '/app' : '/auth'} />
+      <Redirect to={true ? '/app' : '/auth'} />
     </Switch>
   );
 };

@@ -1,6 +1,7 @@
 import { config, backApi } from './api';
 
 export async function getUser() {
+  return true
   return backApi.get('user/', config());
 }
 
