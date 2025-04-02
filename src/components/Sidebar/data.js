@@ -1,39 +1,58 @@
-import testeIcon from '../../assets/teste.png';
+import homeIcon from '../../assets/Sidebar/home.svg';
+import perfilIcon from '../../assets/Sidebar/perfil.svg';
+import notificationIcon from '../../assets/Sidebar/notification.svg';
+import searchIcon from '../../assets/Sidebar/search.svg';
+import portifolioIcon from '../../assets/Sidebar/portifolio.svg';
+import calendarIcon from '../../assets/Sidebar/calendar.svg';
+
+import homeActiveIcon from '../../assets/Sidebar/home-active.svg';
+import perfilActiveIcon from '../../assets/Sidebar/perfil-active.svg';
+import notificationActiveIcon from '../../assets/Sidebar/notification-active.svg';
+import searchActiveIcon from '../../assets/Sidebar/search-active.svg';
+import portifolioActiveIcon from '../../assets/Sidebar/portifolio-active.svg';
+import calendarActiveIcon from '../../assets/Sidebar/calendar-active.svg';
 
 export const SideBarData = [
     {
-        title: "Feed",
-        path: "/",
-        activeIcon: testeIcon,
-        icon: testeIcon,
+        title: "Início",
+        path: "/app",
+        activeIcon: homeActiveIcon,
+        icon: homeIcon,
         cName: "nav-text"
     },
-    // {
-    //     title: "Personas",
-    //     path: "/app/personas",
-    //     activeIcon: teamIconActive,
-    //     icon: teamIcon,
-    //     cName: "nav-text"
-    // },
+    {
+        title: "Portfólio",
+        path: "/app/portfolio",
+        activeIcon: portifolioActiveIcon,
+        icon: portifolioIcon,
+        cName: "nav-text"
+    },
+    {
+        title: "Agendamento",
+        path: "/app/agendamento",
+        activeIcon: calendarActiveIcon,
+        icon: calendarIcon,
+        cName: "nav-text"
+    },
+    {
+        title: "Explorar",
+        path: "/app/explorar",
+        activeIcon: searchActiveIcon,
+        icon: searchIcon,
+        cName: "nav-text"
+    },
+    {
+        title: "Notificações",
+        path: "/app/notificacoes",
+        activeIcon: notificationActiveIcon,
+        icon: notificationIcon,
+        cName: "nav-text"
+    },
     {
         title: "Perfil",
-        path: "/perfil",
-        activeIcon: testeIcon,
-        icon: testeIcon,
-        cName: "nav-text"
-    },
-    // {
-    //     title: "Jornada consumidor",
-    //     path: "/app/jornada-do-cliente",
-    //     activeIcon: routeIconActive,
-    //     icon: routeIcon,
-    //     cName: "nav-text"
-    // },
-    {
-        title: "Agenda",
-        path: "/agenda",
-        activeIcon: testeIcon,
-        icon: testeIcon,
+        path: "/app/perfil",
+        activeIcon: perfilActiveIcon,
+        icon: perfilIcon,
         cName: "nav-text"
     }
   ];

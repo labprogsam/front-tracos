@@ -31,7 +31,8 @@ function PrivateRoute({ component: Comp, location, ...rest }) {
     <Route
       {...rest}
       render={props =>
-        cookies.access_token ? (
+        true ? (
+        // cookies.access_token ? (
           <Comp {...props} />
         ) : (
           <Redirect to={{ pathname: "/auth/login", state: { from: location } }} />

@@ -8,7 +8,7 @@ const AppRoutes = () => {
   return (
     <Base>
       <Switch>
-        <Route exact path={`/app`} component={() => <div>aaaa</div>} />
+        <Route path={`/app`} component={() => <div>aaaa</div>} />
         <Route path={`/app/dados-analiticos`} component={() => <div>aaaa</div>} />
         <Route path={`/app/personas`} component={() => <div>aaaa</div>} />
         <Route path={`/app/configuracoes`} component={() => <div>aaaa</div>} />
