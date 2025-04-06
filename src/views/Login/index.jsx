@@ -25,8 +25,6 @@ const Register = () => {
     console.log(data);
   };
 
-  console.log(errors);
-
   return (
     <MainContainer>
       <ImageSide>
