@@ -53,6 +53,21 @@ A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e o
 ### Integração
 - O front-end consome o back-end via rotas RESTful
 
+## Documentação
+- [Documentação Técnica (Back e Front)](https://docs.google.com/document/d/11KE9-wm2V4x4aKI-znj3iM3o53n2He6Ylcexex9RjmU/edit?tab=t.0)
+- [Protótipos no Figma](https://www.figma.com/design/izkpJRY6NBzNHrdDBZe4zf/Projeto-ESS-2024.2?node-id=1-276&p=f&t=T2j0bhM2gLKobj7w-0)
+- [User Stories](link-user-stories)
+- [Canvas do Projeto](link-canvas)
+
+## Funcionalidades
+- Explorar tatuadores e publicações por estilo, localização e técnicas.
+- Favoritar artistas e postagens.
+- Enviar formulário de interesse para agendamento.
+- Contato via WhatsApp após preenchimento do formulário.
+- Validação de perfil de tatuadores com envio de documentos no primeiro acesso.
+- Atualizações em tempo real via feed personalizado.
+- Dashboard para gestão de portfólio, agendamentos e perfil.
+
 ### Outros
 - **Figma** (Protótipos)
 - **Render** (Deploy)
@@ -90,21 +105,6 @@ REACT_APP_MAIN_URL=
 yarn start
 ```
 
-## Documentação
-- [Documentação Técnica (Back e Front)](link-doc)
-- [Protótipos no Figma](https://www.figma.com/)
-- [User Stories](link-user-stories)
-- [Canvas do Projeto](link-canvas)
-
-## Funcionalidades
-- Explorar tatuadores e publicações por estilo, localização e técnicas.
-- Favoritar artistas e postagens.
-- Enviar formulário de interesse para agendamento.
-- Contato via WhatsApp após preenchimento do formulário.
-- Validação de perfil de tatuadores com envio de documentos no primeiro acesso.
-- Atualizações em tempo real via feed personalizado.
-- Dashboard para gestão de portfólio, agendamentos e perfil.
-
 ## Contribuição
 Contribuições são bem-vindas! Para colaborar:
 1. Clone o repositório e crie sua branch a partir de `main`:
@@ -135,8 +135,8 @@ A plataforma Traços encontra-se em desenvolvimento ativo. Novas funcionalidades
 ## Screenshots
 <p align="center">
   <img src="/Documents/Images/prototipo-login.png" alt="Protótipo Login" width="300" />
-  <img src="/Documents/Images/prototipo-portfolio.png" alt="Protótipo Portfólio" width="300" />
-  <img src="/Documents/Images/prototipo-agendamentos.png" alt="Protótipo da Central de Controle dos Agendamentos" width="300" />
+  <img src="/Documents/Images/home.png" alt="Protótipo Portfólio" width="300" />
+  <img src="/Documents/Images/agendamentos.png" alt="Protótipo da Central de Controle dos Agendamentos" width="300" />
 </p>
 
 ## Equipe do Projeto
