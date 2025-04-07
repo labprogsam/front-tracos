@@ -138,27 +138,35 @@ A plataforma Traços encontra-se em desenvolvimento ativo. Novas funcionalidades
   <img src="/Documents/Images/prototipo-agendamentos.png" alt="Protótipo da Central de Controle dos Agendamentos" width="300" />
 </p>
 
-## 👥 Equipe do Projeto
-<table>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/104479818?v=4" width="100px;" alt="José Luiz"/><br />
-      <b>José Luiz</b><br />
-    </td>
-     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/82007092?v=4 " width="100px;" alt="Juliana Serafim"/><br />
-      <b>Juliana Serafim</b><br />
-    </td>
-    </td>
-     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/37546200?v=4 " width="100px;" alt="Samuel Miranda"/><br />
-      <b>Samuel Miranda</b><br />
-   </td>
-  </td>
-     <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/49241829?v=4" width="100px;" alt="Yasmim Sales"/><br />
-      <b>Yasmim Sales</b><br />
-   </td>
-</table>
+## Equipe do Projeto
+
+<div align="center">
+
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/104479818?v=4" width="100px" alt="José Luiz"/><br/>
+        <b>José Luiz</b>
+      </td>
+      <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/82007092?v=4" width="100px" alt="Juliana Serafim"/><br/>
+        <b>Juliana Serafim</b>
+      </td>
+      <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/37546200?v=4" width="100px" alt="Samuel Miranda"/><br/>
+        <b>Samuel Miranda</b>
+      </td>
+      <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/49241829?v=4" width="100px" alt="Yasmim Sales"/><br/>
+        <b>Yasmim Sales</b>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
 ---
 
-&copy; 2024 Universidade Federal de Pernambuco - Centro de Informática. Todos os direitos reservados.
+<p align="center">
+  &copy; 2024 Universidade Federal de Pernambuco - Centro de Informática. Todos os direitos reservados.
+</p>
