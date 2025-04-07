@@ -11,9 +11,8 @@ import Dialog from "@mui/material/Dialog";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useForm } from "react-hook-form";
-import DialogActions from "@mui/material/DialogActions";
 import Tatoo1 from "../../assets/Schedule/tatuagem-1.jpg";
-import Tatoo2 from "../../assets/Schedule/tatu.png";
+import Tatoo2 from "../../assets/Schedule/caveira.jpg";
 import Tatoo3 from "../../assets/Schedule/old-school.jpg";
 import Tatoo4 from "../../assets/Schedule/surrealista.jpg";
 import Client1 from "../../assets/Schedule/bmo-min.png";
@@ -228,7 +227,7 @@ export default function App() {
           },
         }}
         id="card-dialog"
-        open={formulario != undefined}
+        open={formulario !== undefined}
         onClose={handleClose}
       >
         <StyledModalContent>

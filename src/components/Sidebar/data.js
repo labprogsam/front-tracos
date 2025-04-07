@@ -18,41 +18,41 @@ export const SideBarData = [
         path: "/app",
         activeIcon: homeActiveIcon,
         icon: homeIcon,
-        cName: "nav-text"
+        cName: "nav-text",
     },
     {
         title: "Portfólio",
         path: "/app/portfolio",
         activeIcon: portifolioActiveIcon,
         icon: portifolioIcon,
-        cName: "nav-text"
+        cName: "nav-text",
     },
     {
         title: "Agendamento",
         path: "/app/agendamento",
         activeIcon: calendarActiveIcon,
         icon: calendarIcon,
-        cName: "nav-text"
+        cName: "nav-text",
     },
     {
         title: "Explorar",
         path: "/app/explorar",
         activeIcon: searchActiveIcon,
         icon: searchIcon,
-        cName: "nav-text"
+        cName: "nav-text",
     },
     {
         title: "Notificações",
         path: "/app/notificacoes",
         activeIcon: notificationActiveIcon,
         icon: notificationIcon,
-        cName: "nav-text"
+        cName: "nav-text",
     },
     {
         title: "Perfil",
         path: "/app/perfil",
         activeIcon: perfilActiveIcon,
         icon: perfilIcon,
-        cName: "nav-text"
+        cName: "nav-text",
     }
   ];

@@ -5,6 +5,7 @@ import {Register, Login, Forget} from '../views';
 
 const AuthRoutes = () => {
   const { path } = useRouteMatch();
+  console.log(path)
 
   return (
     <Switch>
