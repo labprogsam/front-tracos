@@ -2,7 +2,7 @@ import { config, backApi } from './api';
 
 export async function getUser() {
   return true
-  return backApi.get('user/', config());
+  // return backApi.get('user/', config());
 }
 
 export async function createUser(body) {

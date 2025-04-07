@@ -13,7 +13,7 @@ function PrivateRoute({ component: Comp, location, ...rest }) {
     try {
       // Checks token and returns a bool
       isLogged = await getUser();
-      if (isLogged === false) {
+      if (isLogged === false || !cookies?.access_token) {
         signOut();
       }
     } catch (err) {
