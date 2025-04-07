@@ -27,19 +27,20 @@ A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e o
 ## Tecnologias Utilizadas
 ### Front-End
 - **React.js**
-- **Tailwind CSS**
-- **Vite**
-- Telas de login e cadastro
-- Sidebar navegável com animações
-- Configuração de rotas (privadas e públicas)
+- **Styled Components**
+- **Material UI tools**
+- **Axios**
+- **Google Cloud Plataform**
+- **Docker**
 
 ### Back-End
 - **Node.js**
 - **Express**
-- **Prisma ORM**
-- Middlewares
-- Sistema de autenticação com tokens (JWT)
-- Rotas privadas e públicas
+- **Sequelize ORM**
+- **Middlewares**
+- **Sistema de autenticação com tokens (JWT)**
+- **Google Cloud Plataform**
+- **Docker**
 
 ### Banco de Dados
 - **PostgreSQL**
