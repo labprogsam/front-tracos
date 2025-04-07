@@ -42,13 +42,6 @@ export const SideBarData = [
         cName: "nav-text",
     },
     {
-        title: "Notificações",
-        path: "/app/notificacoes",
-        activeIcon: notificationActiveIcon,
-        icon: notificationIcon,
-        cName: "nav-text",
-    },
-    {
         title: "Perfil",
         path: "/app/perfil",
         activeIcon: perfilActiveIcon,
