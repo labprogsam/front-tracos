@@ -39,7 +39,7 @@ export const StyledNavItems = styled.ul`
 `;
 
 export const StyledNavTitle = styled.div`
-  margin: 40px 0px 60px 0px;
+  margin: 40px 0px 50px 0px;
   text-decoration: none;
   color: #ffffff;
   display: flex;
@@ -78,6 +78,10 @@ export const StyledLi = styled.li`
   height: 60px;
   color: ${(props) => (props.active ? "#C4A02E" : "#FFF")};
   border-radius: 1px;
+
+  #logout {
+    cursor: pointer;
+  }
 
   a,
   .no-redirect {
