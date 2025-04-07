@@ -34,6 +34,7 @@ A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e o
 - **Docker**
 
 ### Back-End
+- **API RESTful**
 - **Node.js**
 - **Express**
 - **Sequelize ORM**
@@ -50,14 +51,15 @@ A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e o
 ### Armazenamento de Imagens
 - **Cloudinary** (upload, processamento e armazenamento)
 
-### Integração
-- O front-end consome o back-end via rotas RESTful
-
 ## Documentação
-- [Documentação Técnica (Back e Front)](https://docs.google.com/document/d/11KE9-wm2V4x4aKI-znj3iM3o53n2He6Ylcexex9RjmU/edit?tab=t.0)
+- [Documentação dos requisitos](https://docs.google.com/document/d/1ulkMX2E9aWOSVUZ12nSJiSAEy9FAcX7JBakebxSeFQI/edit?usp=sharing)
+- [Documentação Técnica (Back e Front)](https://docs.google.com/document/d/11KE9-wm2V4x4aKI-znj3iM3o53n2He6Ylcexex9RjmU/edit?usp=sharing)
+- [Direcionais da plataforma](https://docs.google.com/document/d/1uOht5712bmhiCFvyB2QRr3JklGG0Wf7J-Z-irw2tXh4/edit?usp=sharing)
 - [Protótipos no Figma](https://www.figma.com/design/izkpJRY6NBzNHrdDBZe4zf/Projeto-ESS-2024.2?node-id=1-276&p=f&t=T2j0bhM2gLKobj7w-0)
-- [User Stories](link-user-stories)
-- [Canvas do Projeto](link-canvas)
+- [User Stories](https://docs.google.com/document/d/1uiDBWRM2Bh8x61BlmF_LUSoAov5ERsSb7lp1fK81aT4/edit?tab=t.0#heading=h.jcqbroa95wlb)
+- [Canvas do Projeto](https://www.canva.com/design/DAGj4-6qeH0/An-tUkPrFskuGJbtFwYXNQ/edit?utm_content=DAGj4-6qeH0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- [Testes (Back)](https://docs.google.com/document/d/1e8iJzvTV9qk9TPCnOCH5nC2c24jxZm7xl5WejpJyfIg/edit?usp=sharing)
+- [Postman](https://documenter.getpostman.com/view/30491735/2sB2cVeMfa)
 
 ## Funcionalidades
 - Explorar tatuadores e publicações por estilo, localização e técnicas.
@@ -67,6 +69,10 @@ A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e o
 - Validação de perfil de tatuadores com envio de documentos no primeiro acesso.
 - Atualizações em tempo real via feed personalizado.
 - Dashboard para gestão de portfólio, agendamentos e perfil.
+
+## Como acessar no navegador?
+**[Clique aqui](https://front-tracos-733697204679.us-central1.run.app/app/explorar) para acessar o front no navegador.**
+**[Clique aqui](https://backend-node-teste-733697204679.us-central1.run.app) para acessar o backend no navegador.**
 
 ### Outros
 - **Figma** (Protótipos)
@@ -107,13 +113,13 @@ yarn start
 
 ## Contribuição
 Contribuições são bem-vindas! Para colaborar:
-1. Clone o repositório e crie sua branch a partir de `main`:
+1. Clone o repositório e crie sua branch a partir de `dev`:
 ```bash
 git checkout -b minha-nova-feature
 ```
-2. Faça suas alterações, adicione e commite:
+2. Faça suas alterações, adicione e commit:
 ```bash
-git commit -m "Minha contribuição"
+git commit -m "Feat: Minha contribuição"
 ```
 3. Envie para a branch remota e abra um Pull Request.
 
@@ -135,8 +141,8 @@ A plataforma Traços encontra-se em desenvolvimento ativo. Novas funcionalidades
 ## Screenshots
 <p align="center">
   <img src="/Documents/Images/prototipo-login.png" alt="Protótipo Login" width="300" />
-  <img src="/Documents/Images/home.png" alt="Protótipo Portfólio" width="300" />
-  <img src="/Documents/Images/agendamentos.png" alt="Protótipo da Central de Controle dos Agendamentos" width="300" />
+  <img src="/Documents/Images/home.png" alt="Protótipo Home" width="300" />
+  <img src="/Documents/Images/perfil.png" alt="Screenshot tela perfil" width="300" />
 </p>
 
 ## Equipe do Projeto
@@ -169,5 +175,5 @@ A plataforma Traços encontra-se em desenvolvimento ativo. Novas funcionalidades
 ---
 
 <p align="center">
-  &copy; 2024 Universidade Federal de Pernambuco - Centro de Informática. Todos os direitos reservados.
+  &copy; 2025 Universidade Federal de Pernambuco - Centro de Informática. Todos os direitos reservados.
 </p>
