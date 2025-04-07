@@ -51,6 +51,103 @@ A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e o
 ### Armazenamento de Imagens
 - **Cloudinary** (upload, processamento e armazenamento)
 
+## Estrutura Organizacional do Código (Diagramas C4)
+
+# Modelo C4 - Projeto Traços
+
+## Nível 1: Diagrama de Contexto
+```mermaid
+graph TD
+    Cliente((Cliente))
+    Tatuador((Tatuador))
+    Sistema[Plataforma Traços]
+
+    WhatsApp["WhatsApp (Agendamento)"]
+    Render["Render (Hospedagem)"]
+    GitHub["GitHub (CI/CD)"]
+    PostgreSQL["Banco de Dados PostgreSQL"]
+
+    Cliente -->|Acessa via navegador| Sistema
+    Tatuador -->|Acessa via navegador| Sistema
+
+    Sistema --> WhatsApp
+    Sistema --> PostgreSQL
+    Sistema --> Render
+    Sistema --> GitHub
+```
+
+## Nível 2: Diagrama de Contêiner
+```mermaid
+graph TB
+    subgraph Cliente
+        Browser["Navegador Web"]
+    end
+
+    subgraph Plataforma Traços
+        Front["Front-end (React)"]
+        Back["Back-end (Node.js + Express)"]
+        DB[(PostgreSQL - Render)]
+    end
+
+    subgraph Externo
+        WhatsApp["WhatsApp"]
+        Cloudinary["Cloudinary (Imagens)"]
+    end
+
+    Browser --> Front
+    Front --> Back
+    Back --> DB
+    Back --> Cloudinary
+    Front --> WhatsApp
+```
+
+## Nível 3: Diagrama de Componentes
+
+### Back-end (Node.js + Express)
+```mermaid
+graph TD
+    Router --> artistInformationsController
+    Router --> authController
+    Router --> bookingsController
+    Router --> customersController
+    Router --> imagesController
+    Router --> notificationsController
+    Router --> reportsController
+    Router --> tagsController
+    Router --> tattooArtistsController
+    Router --> usersController
+
+    AllControllers --> JWTMiddleware["JWT Middleware"]
+    AllControllers --> ErrorHandler["Middleware de Erros"]
+```
+
+### Front-end (React)
+```mermaid
+graph TD
+    AppRoutes --> Home
+    AppRoutes --> Profile
+    AppRoutes --> Schedule
+    AppRoutes --> Portfolio
+    AppRoutes --> Explore
+
+    AuthRoutes --> Login
+    AuthRoutes --> Register
+    AuthRoutes --> Forget
+
+    views --> Explore
+    views --> Forget
+    views --> Home
+    views --> Login
+    views --> Portfolio
+    views --> Profile
+    views --> Register
+    views --> Schedule
+
+    services --> api.js
+    services --> login.js
+    services --> user.js
+```
+
 ## Documentação
 - [Documentação dos requisitos](https://docs.google.com/document/d/1ulkMX2E9aWOSVUZ12nSJiSAEy9FAcX7JBakebxSeFQI/edit?usp=sharing)
 - [Documentação Técnica (Back e Front)](https://docs.google.com/document/d/11KE9-wm2V4x4aKI-znj3iM3o53n2He6Ylcexex9RjmU/edit?usp=sharing)
@@ -60,6 +157,9 @@ A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e o
 - [Canvas do Projeto](https://www.canva.com/design/DAGj4-6qeH0/An-tUkPrFskuGJbtFwYXNQ/edit?utm_content=DAGj4-6qeH0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 - [Testes (Back)](https://docs.google.com/document/d/1e8iJzvTV9qk9TPCnOCH5nC2c24jxZm7xl5WejpJyfIg/edit?usp=sharing)
 - [Postman](https://documenter.getpostman.com/view/30491735/2sB2cVeMfa)
+- [Atas de Reuniões](https://github.com/labprogsam/front-tracos/blob/main/Documents/Ata_Reunioes.md)
+- [Diagramas C4](https://github.com/labprogsam/front-tracos/blob/main/Documents/C4_Diagram.md)
+- [Postmortem do Projeto](https://github.com/labprogsam/front-tracos/blob/main/Documents/Postmortem_Tracos.md)
 
 ## Funcionalidades
 - Explorar tatuadores e publicações por estilo, localização e técnicas.
@@ -134,6 +234,17 @@ Após preencher um formulário com detalhes da tatuagem desejada, o cliente pode
 
 **Tatuadores precisam de validação?**
 Sim. No primeiro acesso, tatuadores devem preencher um formulário com documentos e informações para validação de perfil antes de acessar recursos como portfólio e agendamento.
+
+### Informações Adicionais
+
+Este README tem como objetivo apresentar a estrutura do projeto, principais decisões técnicas, diagramas C4 e organização dos arquivos. Para acompanhar mais de perto a evolução do trabalho, acessar documentos complementares (como atas de reunião, versões anteriores, relatórios de progresso e demais materiais), consulte a pasta oficial da disciplina no Google Drive:
+
+📂 **Acesse aqui:**  
+[Documentos do Projeto - Drive da Disciplina](https://drive.google.com/drive/u/1/folders/1RIkaG9tr3MUFPjsY2Bi3DlVSgBk0n8Lz)
+
+---
+
+Qualquer dúvida ou sugestão de melhoria, sinta-se à vontade para contribuir.
 
 ## Estado do Projeto
 A plataforma Traços encontra-se em desenvolvimento ativo. Novas funcionalidades estão sendo testadas e integradas continuamente.
