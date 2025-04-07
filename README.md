@@ -81,7 +81,7 @@ A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e o
 ## Instalação
 
 ### Pré-requisitos
-Você precisa ter o **Yarn** instalado em sua máquina. Para isso, execute:
+Você precisa ter **Node** e o **Yarn** instalado em sua máquina. Para instalar o node [clique aqui](https://nodejs.org/en/download) Após instalado com sucesso, execute:
 
 ```bash
 npm install -g yarn
@@ -91,10 +91,10 @@ npm install -g yarn
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/front-tracos.git
+git clone git@github.com:labprogsam/front-tracos.git
 ```
 
-2. Instale as dependências:
+2. Instale as dependências. Para isso, vá até a raíz do projeto que você acabou de baixar e execute:
 ```bash
 yarn install
 ```
@@ -115,7 +115,7 @@ yarn start
 Contribuições são bem-vindas! Para colaborar:
 1. Clone o repositório e crie sua branch a partir de `dev`:
 ```bash
-git checkout -b minha-nova-feature
+git checkout -b "feat/branch-name"
 ```
 2. Faça suas alterações, adicione e commit:
 ```bash
