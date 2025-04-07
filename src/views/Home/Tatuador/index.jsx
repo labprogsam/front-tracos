@@ -8,7 +8,7 @@ import Client1 from "../../../assets/Schedule/bmo-min.png";
 import Client2 from "../../../assets/Schedule/finn-min.png";
 import Client3 from "../../../assets/Schedule/jake-min.png";
 import Client4 from "../../../assets/Schedule/princess-min.png";
-import ComunityCard from "../ComunityCard";
+import {Card} from "../../../components";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -43,7 +43,7 @@ const Tatuador = () => {
         tags: ["Geométrico", "Pontilhado"],
         image: Tattoo1,
         userPhoto: Client1,
-        resume:  "Tô querendo fazer uma tattoo nova e achei seu trampo incrível, principalmente no estilo realismo, que é exatamente o que tô procurando. Queria ver contigo se rola de criar uma arte original baseada numa ideia que tive.",
+        resume:  "Lorem ipsum dolor sit amet. Et alias alias ut enim assumenda qui quam necessitatibus ex provident sint eos natus illo est dolores omnis non nisi eligendi? Est magnam magni et praesentium dolorum sit suscipit ipsam est expedita eveniet.",
         likes: 150,
         liked: true
       },
@@ -53,7 +53,7 @@ const Tatuador = () => {
         tags: ["Geométrico", "Pontilhado"],
         image: Tattoo2,
         userPhoto: Client2,
-        resume:  "Tô querendo fazer uma tattoo nova e achei seu trampo incrível, principalmente no estilo realismo, que é exatamente o que tô procurando. Queria ver contigo se rola de criar uma arte original baseada numa ideia que tive.",
+        resume:  "Lorem ipsum dolor sit amet. Et alias alias ut enim assumenda qui quam necessitatibus ex provident sint eos natus illo est dolores omnis non nisi eligendi? Est magnam magni et praesentium dolorum sit suscipit ipsam est expedita eveniet.",
         likes: 70,
         liked: false
       },
@@ -63,7 +63,7 @@ const Tatuador = () => {
         tags: ["Geométrico", "Pontilhado"],
         image: Tattoo2,
         userPhoto: Client3,
-        resume:  "Tô querendo fazer uma tattoo nova e achei seu trampo incrível, principalmente no estilo realismo, que é exatamente o que tô procurando. Queria ver contigo se rola de criar uma arte original baseada numa ideia que tive.",
+        resume:  "Lorem ipsum dolor sit amet. Et alias alias ut enim assumenda qui quam necessitatibus ex provident sint eos natus illo est dolores omnis non nisi eligendi? Est magnam magni et praesentium dolorum sit suscipit ipsam est expedita eveniet.",
         likes: 15,
         liked: false
       },
@@ -73,7 +73,7 @@ const Tatuador = () => {
         tags: ["Geométrico", "Pontilhado"],
         image: Tattoo3,
         userPhoto: Client4,
-        resume:  "Tô querendo fazer uma tattoo nova e achei seu trampo incrível, principalmente no estilo realismo, que é exatamente o que tô procurando. Queria ver contigo se rola de criar uma arte original baseada numa ideia que tive.",
+        resume:  "Lorem ipsum dolor sit amet. Et alias alias ut enim assumenda qui quam necessitatibus ex provident sint eos natus illo est dolores omnis non nisi eligendi? Est magnam magni et praesentium dolorum sit suscipit ipsam est expedita eveniet.",
         likes: 20,
         liked: false
       },
@@ -83,7 +83,7 @@ const Tatuador = () => {
         tags: ["Geométrico", "Pontilhado"],
         image: Tattoo1,
         userPhoto: Client1,
-        resume:  "Tô querendo fazer uma tattoo nova e achei seu trampo incrível, principalmente no estilo realismo, que é exatamente o que tô procurando. Queria ver contigo se rola de criar uma arte original baseada numa ideia que tive.",
+        resume:  "Lorem ipsum dolor sit amet. Et alias alias ut enim assumenda qui quam necessitatibus ex provident sint eos natus illo est dolores omnis non nisi eligendi? Est magnam magni et praesentium dolorum sit suscipit ipsam est expedita eveniet.",
         likes: 3,
         liked: true
       },
@@ -93,7 +93,7 @@ const Tatuador = () => {
         tags: ["Geométrico", "Pontilhado"],
         image: Tattoo2,
         userPhoto: Client2,
-        resume:  "Tô querendo fazer uma tattoo nova e achei seu trampo incrível, principalmente no estilo realismo, que é exatamente o que tô procurando. Queria ver contigo se rola de criar uma arte original baseada numa ideia que tive.",
+        resume:  "Lorem ipsum dolor sit amet. Et alias alias ut enim assumenda qui quam necessitatibus ex provident sint eos natus illo est dolores omnis non nisi eligendi? Est magnam magni et praesentium dolorum sit suscipit ipsam est expedita eveniet.",
         likes: 60,
         liked: false
       },
@@ -103,7 +103,7 @@ const Tatuador = () => {
         tags: ["Geométrico", "Pontilhado"],
         image: Tattoo1,
         userPhoto: Client3,
-        resume:  "Tô querendo fazer uma tattoo nova e achei seu trampo incrível, principalmente no estilo realismo, que é exatamente o que tô procurando. Queria ver contigo se rola de criar uma arte original baseada numa ideia que tive.",
+        resume:  "Lorem ipsum dolor sit amet. Et alias alias ut enim assumenda qui quam necessitatibus ex provident sint eos natus illo est dolores omnis non nisi eligendi? Est magnam magni et praesentium dolorum sit suscipit ipsam est expedita eveniet.",
         likes: 150,
         liked: false
       },
@@ -113,7 +113,7 @@ const Tatuador = () => {
         tags: ["Geométrico", "Pontilhado"],
         image: Tattoo3,
         userPhoto: Client4,
-        resume:  "Tô querendo fazer uma tattoo nova e achei seu trampo incrível, principalmente no estilo realismo, que é exatamente o que tô procurando. Queria ver contigo se rola de criar uma arte original baseada numa ideia que tive.",
+        resume:  "Lorem ipsum dolor sit amet. Et alias alias ut enim assumenda qui quam necessitatibus ex provident sint eos natus illo est dolores omnis non nisi eligendi? Est magnam magni et praesentium dolorum sit suscipit ipsam est expedita eveniet.",
         likes: 150,
         liked: false
       },
@@ -225,7 +225,7 @@ const Tatuador = () => {
           <h1 id="fixed">Atualizações da comunidade</h1>
           <StyledUpdates>
             {comunityCards.map((card, index) => (
-              <ComunityCard key={card.index} card={card} handleLike={() => handleLike(index)} handleClick={() => handleClick(index)} handleReport={() => {}}/>
+              <Card key={card.index} card={card} handleLike={() => handleLike(index)} handleClick={() => handleClick(index)} handleReport={() => {}}/>
             ))}
           </StyledUpdates>
         </StyledSchedules>
@@ -258,7 +258,7 @@ const Tatuador = () => {
               <p id="resume">{comunityCards[selectedCard]?.resume}</p>
               <div id="actions">
                 <div id="tags">
-                  {selectedCard.tags?.map((item) => (
+                  {comunityCards[selectedCard]?.tags?.map((item) => (
                     <p id="tag">{item}</p>
                   ))}
                 </div>
