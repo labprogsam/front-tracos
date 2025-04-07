@@ -1,88 +1,139 @@
+<p align="center">
+  <img src="/Documents/Images/logo-tracos.png" alt="Logo Traços" width="200" />
+</p>
 
-# Traços Front
-Project containing the Traços frontend.
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/IF977/if977-project-standards.svg)](https://github.com/IF977/if977-project-standards/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/IF977/if977-project-standards.svg)](https://github.com/IF977/if977-project-standards/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-Traços is a project that aims to give more visibility to tattoo artists. This is a project created with React and Styled Component.
+## Índice
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Documentação](#documentação)
+- [Funcionalidades](#funcionalidades)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+- [FAQ](#faq)
+- [Estado do Projeto](#estado-do-projeto)
+- [Screenshots](#screenshots)
 
-## Links
-+ [Mockup]()
-+ [Documentation](https://drive.google.com/drive/folders/1RIkaG9tr3MUFPjsY2Bi3DlVSgBk0n8Lz?usp=sharing)
+## Sobre o Projeto
+A **Traços** é uma plataforma desenvolvida para facilitar a conexão entre tatuadores e pessoas interessadas em realizar tatuagens. A ideia surgiu ao identificar a dificuldade de encontrar artistas confiáveis, com estilos variados e boa presença digital. O projeto foi idealizado com base em entrevistas com usuários e análise do mercado, visando criar uma experiência segura, prática e intuitiva.
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+A plataforma oferece um espaço onde tatuadores podem expor seus portfólios e os clientes podem buscar por artistas com base em estilos, localização, disponibilidade e avaliações. Os principais diferenciais incluem o formulário de interesse com fluxo de pré-agendamento, validação de perfis de tatuadores, curadoria de conteúdos e um feed com as últimas atualizações.
 
-### Prerequisites
-You will need to have yarn installed on your machine. For that, simply run:
+## Tecnologias Utilizadas
+### Front-End
+- **React.js**
+- **Tailwind CSS**
+- **Vite**
+- Telas de login e cadastro
+- Sidebar navegável com animações
+- Configuração de rotas (privadas e públicas)
 
-1. Run this command to download the current stable release of Yarn:
+### Back-End
+- **Node.js**
+- **Express**
+- **Prisma ORM**
+- Middlewares
+- Sistema de autenticação com tokens (JWT)
+- Rotas privadas e públicas
+
+### Banco de Dados
+- **PostgreSQL**
+- Modelagem UML
+- Tabelas hospedadas online
+
+### Armazenamento de Imagens
+- **Cloudinary** (upload, processamento e armazenamento)
+
+### Integração
+- O front-end consome o back-end via rotas RESTful
+
+### Outros
+- **Figma** (Protótipos)
+- **Render** (Deploy)
+
+## Instalação
+
+### Pré-requisitos
+Você precisa ter o **Yarn** instalado em sua máquina. Para isso, execute:
+
 ```bash
 npm install -g yarn
 ```
 
-### Installing
-To run the project for the **first** time you must follow this steps:
+### Passos para rodar o projeto localmente
 
-1. Clone the GitHub repository
+1. Clone o repositório:
 ```bash
-git clone git@github.com:labprogsam/front-tracos.git
+git clone https://github.com/seu-usuario/front-tracos.git
 ```
 
-2. Install the dependencies and start the npm project
+2. Instale as dependências:
 ```bash
 yarn install
 ```
 
-3. Create **.env** file and copy the following content to it
-
-```dotenv
-# Application settings
-
-PORT = 3001
+3. Crie um arquivo `.env` na raiz do projeto e copie o seguinte conteúdo:
+```env
+# Configurações da aplicação
+PORT=3001
 REACT_APP_MAIN_URL=
-
 ```
 
-## Running the project
-To run the project (if already installed), just follow this simple command on the client directory:
-
+4. Inicie o projeto localmente:
 ```bash
 yarn start
 ```
 
-## Built With
-* **React**
-* **Styled Component**
+## Documentação
+- [Documentação Técnica (Back e Front)](link-doc)
+- [Protótipos no Figma](https://www.figma.com/)
+- [User Stories](link-user-stories)
+- [Canvas do Projeto](link-canvas)
 
-## GitHub
+## Funcionalidades
+- Explorar tatuadores e publicações por estilo, localização e técnicas.
+- Favoritar artistas e postagens.
+- Enviar formulário de interesse para agendamento.
+- Contato via WhatsApp após preenchimento do formulário.
+- Validação de perfil de tatuadores com envio de documentos no primeiro acesso.
+- Atualizações em tempo real via feed personalizado.
+- Dashboard para gestão de portfólio, agendamentos e perfil.
 
-### Branches
-The development branches can be:
+## Contribuição
+Contribuições são bem-vindas! Para colaborar:
+1. Clone o repositório e crie sua branch a partir de `main`:
+```bash
+git checkout -b minha-nova-feature
+```
+2. Faça suas alterações, adicione e commite:
+```bash
+git commit -m "Minha contribuição"
+```
+3. Envie para a branch remota e abra um Pull Request.
 
-+ feat
-+ fix
-+ refact
+Leia as diretrizes de contribuição no [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The name of the development branches must follow this template: `feat/branch-name`
+## Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-In addition to these there are 2 stable branches:
+## FAQ
+**Como funciona o agendamento de tatuagens?**
+Após preencher um formulário com detalhes da tatuagem desejada, o cliente poderá acessar um botão para contato direto via WhatsApp com o tatuador.
 
-+ dev
-+ main
+**Tatuadores precisam de validação?**
+Sim. No primeiro acesso, tatuadores devem preencher um formulário com documentos e informações para validação de perfil antes de acessar recursos como portfólio e agendamento.
 
-The dev and main branches should only be updated by pull requests.
+## Estado do Projeto
+A plataforma Traços encontra-se em desenvolvimento ativo. Novas funcionalidades estão sendo testadas e integradas continuamente.
 
-### Commits
-Must begin with the name of the branch you developed on, following the model: _“Feat(user story): rest of commit…”._
-
-Must be simple and show briefly what you just did.
-
-Ex: `git commit -m "Feat(32): Added the parallax effect to the background"`
-
-> Read our code of conduct and find out [how to contribute](https://github.com/labprogsam/front-tracos/blob/main/CONTRIBUTING.md)
-
-## Development Team
-* **Samuel Miranda** - *Developer / Scrum Master* -  [labprogsam](https://github.com/labprogsam)
-* **Juliana Serafim** - *Developer / Designer* - [Juliana-serafim](https://github.com/Juliana-serafim)
-* **Yasmin Adrieny** - *Developer / Tester / QA* - [AdrySales](https://github.com/AdrySales)
-* **José Luiz** - *Developer / PO* - [jldsn](https://github.com/jldsn)
-
+## Screenshots
+<p align="center">
+  <img src="/Documents/Images/prototipo-login.png" alt="Protótipo Login" width="300" />
+  <img src="/Documents/Images/prototipo-portfolio.png" alt="Protótipo Portfólio" width="300" />
+  <img src="/Documents/Images/prototipo-agendamentos.png" alt="Protótipo da Central de Controle dos Agendamentos" width="300" />
+</p>
