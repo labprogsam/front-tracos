@@ -9,10 +9,15 @@ import CalendarMonth from "@mui/icons-material/CalendarMonth"
 
 const Card = ({card, handleClick}) => {
   const { attributes, listeners, setNodeRef, transform } = useSortable({
-    id: card.id
+    id: card?.id || Math.floor(Math.random() * 1000)
   });
 
   const style = {
+    margin: "10px",
+    opacity: 1,
+    color: "#333",
+    background: "white",
+    padding: "10px",
     transform: CSS.Transform.toString(transform)
   };
 

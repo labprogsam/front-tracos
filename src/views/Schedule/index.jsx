@@ -77,6 +77,12 @@ export default function App() {
           photo: Client3,
           resume:  "E aí, tudo certo? Tô entrando em contato porque quero fechar uma tattoo contigo. Vi que você manda muito bem no estilo old school, e tô com uma ideia que acho que combina bastante com esse traço mais tradicional. Quero fazer uma tatuagem de um navio em alto-mar, todo no estilo old school clássico — bem bold lines, cores vibrantes, aquele clima meio nostálgico."
         },
+      ],
+    },
+    {
+      id: "Confirmados",
+      title: "Confirmados",
+      cards: [
         {
           id: "Card4",
           name: "Yasmin Sales",
@@ -87,11 +93,6 @@ export default function App() {
           resume:  "Pensei em uma tatuagem de um gatinho astronauta flutuando no espaço, com aquela vibe bem fofa e engraçada. Imagina ele dentro de um capacete redondo meio exagerado, com a carinha espremida no vidro, expressão curiosa e uma patinha tentando “alcançar” uma fatia de pizza que também tá flutuando perto dele."
         },
       ],
-    },
-    {
-      id: "Confirmados",
-      title: "Confirmados",
-      cards: [],
     },
   ];
   const [columns, setColumns] = useState(data);
