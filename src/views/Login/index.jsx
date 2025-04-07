@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import LogoIcon from "../../assets/Login/logo.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
+import Cookies from 'js-cookie';
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import {
@@ -11,6 +12,7 @@ import {
   FormContainer,
   ErrorSpan,
 } from "./styles";
+import { postLogin } from '../../services/login';
 
 const Register = () => {
   const {
@@ -19,13 +21,21 @@ const Register = () => {
     watch,
     formState: { errors },
   } = useForm();
+  const { replace } = useHistory();
+  const { pathname } = useLocation();
   const [requiredError, setRequiredError] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const result = await postLogin(data?.email, data?.password);
+    Cookies.set('access_token', result?.access_token, { path: '' });
+    Cookies.set('profile', result?.profile, { path: '' });
+    
+    setTimeout(() => {
+      if (!pathname.startsWith('/app')) {
+        replace('/app');
+      }
+    }, 300);
   };
-
-  console.log(errors);
 
   return (
     <MainContainer>
@@ -70,7 +80,7 @@ const Register = () => {
                 Crie uma conta
               </Button>
             </Link>
-            <Link to="/auth/forget">Esqueci minha senha</Link>
+            <Link to="/auth/forgot-password">Esqueci minha senha</Link>
           </div>
         </FormContainer>
       </FormSide>

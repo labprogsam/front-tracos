@@ -53,11 +53,11 @@ export const StyledBaseContainer = styled.div`
 `;
 
 export const StyledBase = styled.div`
-	padding: 0 30px;
+	padding: 20px 50px;
 	width: 100%;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-start;
+	justify-content: flex-start;
 	flex-direction: column;
 	box-sizing: border-box;
 `;

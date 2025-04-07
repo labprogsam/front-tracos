@@ -14,6 +14,11 @@ const theme = createTheme({
       textTransform: 'none'
     }
   },
+  palette: {
+    secondary: {
+      main: '#333333',
+    },
+  },
   components: {
     MuiCssBaseline: {
       styleOverrides: `

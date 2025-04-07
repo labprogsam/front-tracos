@@ -1,12 +1,13 @@
 import React from 'react';
+import Button from "@mui/material/Button";
 import {
   StyledModalTitle,
   StyledFeedbackContent,
   StyledModalText
 } from './styles';
 import Dialog from '@mui/material/Dialog';
-import successIcon from '../../assets/teste.png';
-import failIcon from '../../assets/teste.png';
+import successIcon from "@mui/icons-material/Done";
+import failIcon from "@mui/icons-material/ErrorOutline";
 
 function GlobalAlert({ title, open, type, text, close }) {
   
@@ -22,9 +23,9 @@ function GlobalAlert({ title, open, type, text, close }) {
           <StyledModalText>
             {text}
           </StyledModalText>
-          <button className="button-intregation" onClick={() => handleClick()}>
+          <Button className="button-intregation" onClick={() => handleClick()}>
             Entendi
-          </button>
+          </Button>
       </StyledFeedbackContent>
     </Dialog>
   )

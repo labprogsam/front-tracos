@@ -1,27 +1,45 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { SideBarData } from "./data";
-import testeIcon from '../../assets/teste.png';
+import logoIcon from '../../assets/Sidebar/logo.svg';
+import logo2Icon from '../../assets/Sidebar/logo2.svg';
+import logoutIcon from '../../assets/Sidebar/logout.svg';
+import { clearCookies } from "../../utils/clearCookies";
+import Cookies from 'js-cookie';
 import {
   StyledNavbar,
   StyledNavItems,
   StyledNavTitle,
   StyledLi,
-  StyledBottomItems,
   StyledContainer,
   StyledText,
-  StyledTitle,
-  StyledInfos,
-  StyledInfoEmail,
-  StyledLogout
+  StyledFooter,
+  StyledFooterText,
+  StyledLogo
 } from './styles';
 
 const SideBar = () => {
-  const [active, setActive] = useState(window.location.pathname);
+  const { replace } = useHistory();
+  const { pathname } = useLocation();
+  const [active, setActive] = useState(pathname);
   const [mouseEnter, setMouseEnter] = useState(false);
+  
+  const cookies = Cookies.get();
+
+  useEffect(() => {
+    setActive(pathname)
+  }, [pathname]);
 
   const signOut = () => {
+    clearCookies();
 
+    if (!pathname.startsWith('/auth')) {
+      replace('/auth');
+    }
+  }
+
+  const hiddenElem = (item) => {
+    return item?.path == "/app/portfolio" && cookies?.profile !== "tatuador"
   }
 
   return (
@@ -30,33 +48,33 @@ const SideBar = () => {
         <StyledNavbar onMouseEnter={() => setMouseEnter(true)} onMouseLeave={() => setMouseEnter(false)} expandNav={mouseEnter}>
           <StyledNavItems>
             <StyledNavTitle>
-              <Link to="/">
-                <img src={testeIcon} alt="Logo Traços" />
-                {mouseEnter && <StyledTitle className={mouseEnter}>Traços</StyledTitle>}
+              <Link id="nav-logo" className={mouseEnter} to="/">
+                <StyledLogo className={mouseEnter} id="logo" src={mouseEnter ? logoIcon : logo2Icon} alt="Logo Traços" />
               </Link>
             </StyledNavTitle>
-            {SideBarData.map((item, index) => {
-              return (
-                <StyledLi key={index} active={active === item.path}>
+            {SideBarData.map((item, index) => (
+                !hiddenElem(item) && <StyledLi key={index}>
                   <Link onClick={() => setActive(item.path)} to={item.path}>
-                    <img src={active === index ? item.activeIcon : item.icon} />
-                    {mouseEnter && <StyledText className={mouseEnter}>{item.title}</StyledText>}
+                    <img id="sidebar-icon" src={active === item.path ? item.activeIcon : item.icon} />
+                    {mouseEnter && <StyledText active={active === item.path} className={mouseEnter}>{item.title}</StyledText>}
                   </Link>
                 </StyledLi>
-              );
-            })}
-            <StyledBottomItems>
-              <div className="no-redirect">
-                <img src={testeIcon} />
-                {mouseEnter &&
-                  <StyledInfoEmail className={mouseEnter}>email@gmail</StyledInfoEmail>
-                }
-              </div>
-            </StyledBottomItems>
-            <StyledLogout expandNav={mouseEnter} onClick={() => signOut()}>
-              <img src={testeIcon} alt="botão de logout" />
-              {mouseEnter && <StyledText className={mouseEnter}>Logout</StyledText>}
-            </StyledLogout>
+            ))}
+            <StyledLi id="logout-sidebar">
+              <a id="logout" onClick={() => signOut()}>
+                <img id="sidebar-icon" src={logoutIcon} />
+                {mouseEnter && <StyledText className={mouseEnter}>Sair</StyledText>}
+              </a>
+            </StyledLi>
+            <StyledFooter >
+              <StyledFooterText className={mouseEnter}>
+                <p>Política de privacidade e dados</p>
+                <div>
+                  <p>Todos os direitos reservados</p>
+                  <p id="no-margin-sidebar">TRAÇOS 2025</p>
+                </div>
+              </StyledFooterText>
+            </StyledFooter>
           </StyledNavItems>
         </StyledNavbar>
       </StyledContainer>
