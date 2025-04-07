@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import IconButton from '@mui/material/IconButton';
 import LikedIcon from "@mui/icons-material/Favorite";
 import UnlikedIcon from "@mui/icons-material/FavoriteBorder";
-import ReportedIcon from "@mui/icons-material/Flag";
 import UnreportedIcon from "@mui/icons-material/OutlinedFlag";
 import { StyledComunityCard, StyledComunityImage } from "./styles";
 
-const ComunityCard = ({ card, handleClick, handleReport, handleLike }) => {
-
+const Card = ({ view = "home", card, handleClick, handleReport, handleLike }) => {
   return (
-    <StyledComunityCard>
+    <StyledComunityCard className={view}>
       <StyledComunityImage onClick={handleClick} src={card?.image} alt="Imagem da comunidade" />
       <div id="header-card-row">
         <div id="photo-name-card">
@@ -38,4 +36,4 @@ const ComunityCard = ({ card, handleClick, handleReport, handleLike }) => {
   );
 };
 
-export default ComunityCard;
+export default Card;

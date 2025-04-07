@@ -6,21 +6,24 @@ export const StyledComunityCard = styled.div`
     flex-direction: column;
     background-color: #FFF;
 
-    @media (max-width: 1780px) {
-        width: 280px;
+    &.home {
+        @media (max-width: 1780px) {
+            width: 280px;
+        }
+    
+        @media (max-width: 1530px) {
+            width: 250px;
+        }
+    
+        @media (max-width: 1400px) {
+            width: 240px;
+        }
+    
+        @media (max-width: 1321px) {
+            width: 100%;
+        }
     }
 
-    @media (max-width: 1530px) {
-        width: 250px;
-    }
-
-    @media (max-width: 1400px) {
-        width: 240px;
-    }
-
-    @media (max-width: 1321px) {
-        width: 100%;
-    }
 
     #header-card-row {
         margin-top: 15px;
